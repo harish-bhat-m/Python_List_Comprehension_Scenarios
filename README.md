@@ -23,7 +23,7 @@ print(new_message)
 ```
 Here is the result of the above code snippet.
 ``` 
-python3 Example1.py
+harish@HBM:python3 Example1.py
 ['H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd'] 
 ```
  
