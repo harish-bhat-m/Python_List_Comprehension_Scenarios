@@ -9,7 +9,10 @@ The list comprehension is nothing but building a list using simpler syntax. It o
 
 ## Syntaxes and examples
 Let's dive into the syntax </br>
-```list_variable_new = [variable for in list_varaible_old if condition]```<br> Although the syntax is not the complete syntax, the above syntax includes pretty much complete syntax. Let's see some real world examples and scenarios.
+```
+list_variable_new = [variable for in list_varaible_old if condition]
+```
+<br> Although the syntax is not the complete syntax, the above syntax includes pretty much complete syntax. Let's see some real world examples and scenarios.
 
 ### Example1 Split the letters from a string
 Lets use the list comprehension for splitting the string into list of individual character. <br>
