@@ -40,7 +40,7 @@ harish@HBM:python3 Example2.py
 ['H', 'E', 'L', 'L', 'O', ' ', 'W', 'O', 'R', 'L', 'D']
 ```
 
-### Example3 Conditional, Generate the even and numbers from 0 to 100
+### Example3 Conditional, Generate the even and odd numbers from 0 to 10
 In this example we will extend our example of list comprehension by including the condition. We will write a program which will generate the list of odd and even numbers from set of natural numbers. Here is the code.
 
 ```
