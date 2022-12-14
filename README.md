@@ -39,3 +39,24 @@ When we run the above code we get the list with all the character converted into
 harish@HBM:python3 Example2.py
 ['H', 'E', 'L', 'L', 'O', ' ', 'W', 'O', 'R', 'L', 'D']
 ```
+
+### Example3 Conditional, Generate the even and numbers from 0 to 100
+In this example we will extend our example of list comprehension by including the condition. We will write a program which will generate the list of odd and even numbers from set of natural numbers. Here is the code.
+
+```
+even = [number for number in range(10) if number % 2 == 0]
+odd = [number for number in range(10) if number % 2 != 0]
+print("The set of odd numbers between 0 to 10")
+print(odd)
+print("The set of even numbers between 0 to 10")
+print(even)
+```
+Let's see the results of above code snippet
+```
+harish@HBM:python3 Example3.py
+The set of odd numbers between 0 to 10
+[1, 3, 5, 7, 9]
+The set of even numbers between 0 to 10
+[0, 2, 4, 6, 8]
+
+```
