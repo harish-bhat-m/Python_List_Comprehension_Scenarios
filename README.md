@@ -27,4 +27,15 @@ harish@HBM:python3 Example1.py
 ['H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd'] 
 ```
  
- 
+### Example2 Split the letters from a string and change the it to all upper case
+In this example we will be converting the individual character of the list into upper case letter. Please find the code snippet for the same.
+```
+message = "hello world"
+new_message = [char.upper() for char in message]
+print(new_message)
+```
+When we run the above code we get the list with all the character converted into upper case letters.
+```
+harish@HBM:python3 Example2.py
+['H', 'E', 'L', 'L', 'O', ' ', 'W', 'O', 'R', 'L', 'D']
+```
