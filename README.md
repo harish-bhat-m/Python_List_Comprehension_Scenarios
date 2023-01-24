@@ -92,4 +92,21 @@ harish@HBM:python3 Example5.py
 ['Odd', 'Even', 'Odd', 'Odd', 'Odd', 'Even', 'Odd']
 ```
 
+### Example 6 Using any functions in the list comprehension (generate the factorial in list).
+In this example we will see how we can use any functions (built-in or user defined function) and build the list. In the below example, we will generate the factorial list.
+```
+import math
+
+factorial_list = [math.factorial(n) for n in range(10)]
+print (factorial_list)
+```
+Here is result of the above run
+
+```
+harish@HBM:python3 Example6.py
+[1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880]
+```
+
+### Example 7 Using the comparison operator in list comprehension.
+Here we see a simple example of how we can use the comparison operator in the list comp
 
