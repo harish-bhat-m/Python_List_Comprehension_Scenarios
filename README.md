@@ -107,6 +107,55 @@ harish@HBM:python3 Example6.py
 [1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880]
 ```
 
-### Example 7 Using the comparison operator in list comprehension.
-Here we see a simple example of how we can use the comparison operator in the list comp
+### Example 7 Using the comparison and logical operator in list comprehension.
+Here we see a simple example of how we can use the comparison operator in the list comprehension.
+In this example we will cull a list of numbers from the another list using the list comprehension technique, where the numbers are between 100 and 200.
+
+```
+list_of_numbers = [100, 23, 153, 4533, -150, 175, 99, 200]
+
+number_between_100_200 = [no for no in list_of_numbers if no > 100 and no < 200]
+print(number_between_100_200)
+
+```
+Here is the result
+```
+harish@HBM:python3 Example7.py
+[153, 175]
+```
+
+### Example 8 Using the membership operator in the list comprehension.
+The membership operators are used to test if the sequence is present in the object or not. Example of membership operators are 'in' and 'not in'. Lets see and example how this can be used in the list comprehension with an example. We have list of different objects in the list, we will separate out all the fruit items from the original list. Let's dive into the code snippet.
+
+```
+fruits = ['apple', 'citrus', 'orange', 'banana', 'mango', 'grapes', 'berries']
+
+list_of_food = ["rice", 'weat', 'mango', 'apple', 'onion', 'barley', 'millet']
+
+list_of_fruits = [food for food in list_of_food if food in fruits]
+print(list_of_fruit)
+```
+Here is the result
+```
+harish@HBM:python3 Example8.py
+['mango', 'apple']
+```
+Similarly, we can make use of 'not in' operator.
+
+### Example 9 How to flatten the two dimension list using list comprehension.
+Here we will go through a code snippet, which will flatten the two dimension list using the python list comprehension.
+
+```
+two_d_list = [[1,2,3],[4,5,6],[7,8,9]]
+one_d_list = [number for inner_list in two_d_list for number in inner_list]
+print(two_d_list)
+print(one_d_list)
+```
+While running the above code snippet, we get the following result
+
+```
+harish@HBM:python3 Example9.py
+[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
 
