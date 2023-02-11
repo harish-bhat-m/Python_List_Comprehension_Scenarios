@@ -159,3 +159,65 @@ harish@HBM:python3 Example9.py
 [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
+### Example 10 Reverse the string using the list comprehension
+Here will go through one of the way to reverse the string using list comprehension. Here we get the index in reverse order and build the list in reverse order. Using the string join method we will build the string using the reverse list.
+```
+input_string = "Hello World"
+output_string = "".join([input_string[i] for i in range(len(input_string)-1, -1, -1)])
+print(output_string)
+```
+
+Below is the result of the above run.
+```ss
+harish@HBM:python3 Example10.py
+dlroW olleH
+```
+
+### Example 11. Print the string in shorthand form "aaabbddeeee" as 3a3b3d4es
+This is typical interview question to generate the shorthand notation for the repeating elements in the string. Let's use the list comprehension to solve the problem. Here we are using a groupby function from itertool library, the groupby fucntion will create the sub iterator grouped by value. Then we will append the letter after getting the individual groups length after converting it to the list.
+```
+from itertools import groupby
+input_string = "aabbbzzzzzzttttttt"
+output_string = "".join([str(len(list(grp)))+ let for let,grp in groupby(input_string)])
+print (output_string)
+```
+The run reveals the below shorthand string.
+```
+harish@HBM:python3 Example11.py
+2a3b6z7t
+```
+
+### Example 12 Add the two square matrix using the list comprehension.
+This is pretty simple example which adds the two square matrix using list comprehension.
+```
+matrix_1 = [[11,52,73],[44,12,23],[10,15,12]]
+matrix_2 = [[45,34,20],[48,56,67],[76,80,78]]
+
+matrix_3 = [[matrix_1[i][j]+ matrix_2[i][j] for j in range(len(matrix_1[0]))] for i in range(len(matrix_1))]
+print(matrix_3)
+```
+The result is here.
+```
+harish@HBM:python3 Example12.py
+[[56, 86, 93], [92, 68, 90], [86, 95, 90]]
+```
+
+### Example 13 Matrix multiplication using the list comprehension.
+In this example we see how to the matrix multiplication using the list comprehension. The last for loop that is ```for matrix_1_row in matrix_1``` gives the individual list from 'matrix_1', the second last loop that is ```for matrix_2_col in zip(*matrix_2)``` gives the transposed individual list (column) from the matrix_2. The loop ``` for x, y in zip(matrix_1_row, matrix_2_col)``` packs the row of matrix_1 with column of matrix_2 and finally we sum these multiplication.
+
+```
+matrix_1 = [[11,52,73],[44,12,23],[10,15,12]]
+matrix_2 = [[45,34,20],[48,56,67],[76,80,78]]
+
+matrix_3 = [[sum(x * y for x, y in zip(matrix_1_row, matrix_2_col)) for matrix_2_col in zip(*matrix_2)] for matrix_1_row in matrix_1]
+
+print(matrix_3)
+```
+Here is the result of the matrix multiplication
+```
+harish@HBM:python3 Example13.py
+[[8539, 9126, 9398], [4304, 4008, 3478], [2082, 2140, 2141]]
+```
+
+
+
